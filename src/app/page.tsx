@@ -3,7 +3,15 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import "@fontsource/paytone-one";
 
-const TaskButton = ({ triggerFn, text, hasIcon }: any) => {
+const TaskButton = ({
+  triggerFn,
+  text,
+  hasIcon,
+}: {
+  triggerFn?: () => void;
+  text?: string;
+  hasIcon?: boolean;
+}) => {
   return (
     <button
       className="text-white uppercase bg-[#fe6503] w-full rounded-full text-2xl py-3 hover:bg-[#ffbd59]"
